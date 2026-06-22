@@ -185,6 +185,8 @@ except Exception as e:
 try:
     print('\nVisualizando os dados...')
     plt.subplots(2, 2, figsize=(18, 10))
+    plt.suptitle('Roubo de Veículos por Município', fontsize=16, fontweight='bold', color='blue')    
+    plt.tight_layout()
 
     # POSIÇÃO 1: BOXPLOT
     plt.subplot(2, 2, 1) # 2 linhas e 2 colunas para a área 1
@@ -193,19 +195,19 @@ try:
 
     # POSIÇÃO 2: MEDIDAS
     plt.subplot(2, 2, 2)
-    plt.text(0.1, 0.9, f'Média: {media_roubo_veiculo:.2f}')  
-    plt.text(0.1, 0.8, f'Distância: {distancia:.2f}%')  
-    plt.text(0.1, 0.7, f'Limite Inferior: {limite_inferior:.2f}')
-    plt.text(0.1, 0.6, f'Mínimo: {minimo:.2f}')
-    plt.text(0.1, 0.5, f'Quartil Inferior: {quartil_inferior:.2f}')    
-    plt.text(0.1, 0.4, f'Mediana: {mediana_roubo_veiculo:.2f}')
-    plt.text(0.1, 0.3, f'Quartil Superior: {quartil_superior:.2f}')
-    plt.text(0.1, 0.2, f'Limite Superior: {limite_superior:.2f}')    
-    plt.text(0.1, 0.1, f'Máximo: {maximo:.2f}')    
-    plt.text(0.1, 0.0, f'Amplitude: {amplitude:.2f}')
+    plt.text(0.1, 0.9, f'Média: {media_roubo_veiculo:.2f}', fontsize=9)  
+    plt.text(0.1, 0.8, f'Distância: {distancia:.2f}%', fontsize=9)  
+    plt.text(0.1, 0.7, f'Limite Inferior: {limite_inferior:.2f}', fontsize=9)
+    plt.text(0.1, 0.6, f'Mínimo: {minimo:.2f}', fontsize=9)
+    plt.text(0.1, 0.5, f'Quartil Inferior: {quartil_inferior:.2f}', fontsize=9)    
+    plt.text(0.1, 0.4, f'Mediana: {mediana_roubo_veiculo:.2f}', fontsize=9)
+    plt.text(0.1, 0.3, f'Quartil Superior: {quartil_superior:.2f}', fontsize=9)
+    plt.text(0.1, 0.2, f'Limite Superior: {limite_superior:.2f}', fontsize=9)    
+    plt.text(0.1, 0.1, f'Máximo: {maximo:.2f}', fontsize=9)    
+    plt.text(0.1, 0.0, f'Amplitude: {amplitude:.2f}', fontsize=9)
 
     plt.axis('off')
-    plt.title('Resumo Estatístico')
+    plt.title('Resumo Estatístico',)
 
     # POSIÇÃO 3 - DEMONSTRAÇÃO DOS OUTLIERS SUPERIORES
     plt.subplot(2, 2, 3)
