@@ -130,7 +130,7 @@ try:
         print(df_extremo_inferior.sort_values(by= 'estelionato', ascending=True))
         
     df_extremo_superior = df_estelionato[df_estelionato['estelionato'] > limite_superior]
-    df_extremo_superior = df_extremo_superior.to_string(index=False)
+    df_extremo_superior = df_extremo_superior(index=False)
     
     # Visualizaçãod dos periodos
     # print(df_menor_qtd_estelionato)
@@ -192,7 +192,7 @@ try:
         )    
 
     plt.bar(
-        df_extremo_superior['munic'], #.str.slice(0, 10),  str slice limita os caracteres
+        df_extremo_superior['mes_ano'], #.str.slice(0, 10),  str slice limita os caracteres
         df_extremo_superior['estelionato']
     )
 
@@ -244,10 +244,10 @@ try:
            # Rotulo dos dados:
         for i, valor in enumerate(df_menor_qtd_estelionato['estelionato']):
             plt.text(
-                valor + deslocamento, # posição X 
-                i, # posição Y
-                f'{valor:,}',
-                ha= 'center'
+            valor + deslocamento, # posição X 
+            i, # posição Y
+            f'{valor:,}',
+            ha= 'center'
             )
 
             plt.title('Meses e Anos com Menor Índice de Estelionato')
